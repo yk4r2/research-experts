@@ -34,7 +34,7 @@ Lists all available chains with link count and most recent work.
 ## Installation
 
 ```bash
-/plugin marketplace add https://github.com/Deevs/agent-system
+/plugin marketplace add git@github.com:DeevsDeevs/agent-system.git
 /plugin install chain-system@deevs-agent-system
 ```
 
