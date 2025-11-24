@@ -1,11 +1,11 @@
 # Dev Experts
 
-Critical, opinionated developer personas focused on approach and methodology.
+Critical, opinionated developer personas as autonomous agents. Claude invokes them automatically based on task context, or you can invoke manually.
 
-## Experts
+## Agents
 
-### /architect - Technical Lead & Architect
-Plans features and implementation. Critical, explores alternatives, creates actionable plans.
+### architect - Technical Lead & Architect
+Auto-invoked for feature design and implementation planning. Critical, explores alternatives, creates actionable plans.
 
 **Workflow**:
 - Interrogates requirements
@@ -14,12 +14,12 @@ Plans features and implementation. Critical, explores alternatives, creates acti
 - Asks you to choose
 - Creates implementation plan in `.claude/experts/plans/[slug].md`
 
-**Use when**: Designing features, architecture decisions, implementation planning
+**Auto-invoked when**: Designing features, architecture decisions, implementation planning
 
 ---
 
-### /devops - Production Detective
-Hunts bugs, investigates failures, debugs infrastructure. Methodical and systematic.
+### devops - Production Detective
+Auto-invoked for debugging production issues and infrastructure problems. Methodical and systematic.
 
 **Workflow**:
 - Gathers evidence (symptoms, timing, changes)
@@ -27,12 +27,12 @@ Hunts bugs, investigates failures, debugs infrastructure. Methodical and systema
 - Tests systematically
 - Provides diagnostic commands and investigation path
 
-**Use when**: Production issues, mysterious bugs, deployment failures
+**Auto-invoked when**: Production issues, mysterious bugs, deployment failures
 
 ---
 
-### /rust-dev - Rust Purist
-Idiomatic, safe Rust. Hunts un-Rusty patterns.
+### rust-dev - Rust Purist
+Auto-invoked for Rust code review and refactoring. Hunts un-Rusty patterns.
 
 **Focus**:
 - Ownership & borrowing issues
@@ -42,29 +42,35 @@ Idiomatic, safe Rust. Hunts un-Rusty patterns.
 - Performance optimizations
 - Safety violations
 
-**Use when**: Rust code review, idiom improvements
+**Refactoring Mode**: Invoke with "refactor for maintainability" to get comprehensive refactoring plans saved to `.claude/plans/[slug]-ref.md`
+
+**Auto-invoked when**: Rust code review, idiom improvements, refactoring requests
 
 ---
 
-### /python-dev - Pythonista
-Clean, type-safe, modern Python. Hunts un-Pythonic code.
+### python-dev - Pythonista
+Auto-invoked for Python code review and refactoring. Hunts un-Pythonic code. Mandates UV and msgspec.
 
 **Focus**:
-- Type safety (hints, validation)
+- Type safety (hints, msgspec validation)
 - Async pitfalls
 - Error handling
 - Modern Python features (3.10+)
 - Data structures (dataclasses, TypedDict)
 - Code smells
 
-**Use when**: Python code review, modernization
+**Mandates**: UV for package management, msgspec for validation (not Pydantic)
+
+**Refactoring Mode**: Invoke with "refactor for maintainability" to get comprehensive refactoring plans saved to `.claude/plans/[slug]-ref.md`
+
+**Auto-invoked when**: Python code review, modernization, refactoring requests
 
 ---
 
-### /reviewer - Grumpy Code Wizard
-40 years experience. Infinite attention span. Brutally honest but helpful.
+### reviewer - Grumpy Code Wizard
+Auto-invoked for comprehensive code review before commits/PRs. 40 years experience. Reads EVERY line.
 
-**Notices**:
+**Catches**:
 - Security holes
 - Race conditions
 - Performance sins (O(n²), N+1 queries)
@@ -73,12 +79,12 @@ Clean, type-safe, modern Python. Hunts un-Pythonic code.
 
 **Output**: Line-by-line analysis with specific fixes
 
-**Use when**: Pre-merge review, security audit, bug hunting
+**Auto-invoked when**: Pre-merge review, security audit, bug hunting
 
 ---
 
-### /tester - Testing Specialist
-Writes comprehensive, real-world tests. No fake tests or useless comments.
+### tester - Testing Specialist
+Auto-invoked when writing tests for new features. Writes comprehensive, real-world tests. No fake tests or useless comments.
 
 **Workflow**:
 - Understands test infrastructure
@@ -86,7 +92,7 @@ Writes comprehensive, real-world tests. No fake tests or useless comments.
 - Identifies test cases (happy path, edge cases, errors)
 - Writes real tests with actual data
 
-**Use when**: Writing tests, improving coverage
+**Auto-invoked when**: Writing tests, improving coverage
 
 ## Installation
 

@@ -25,7 +25,14 @@
       "name": "dev-experts",
       "description": "Critical developer personas: architect, devops detective, rust/python purists, grumpy reviewer, testing specialist",
       "source": "./dev-experts",
-      "agents": ["./agents/"]
+      "agents": [
+        "./agents/architect.md",
+        "./agents/devops.md",
+        "./agents/python-dev.md",
+        "./agents/reviewer.md",
+        "./agents/rust-dev.md",
+        "./agents/tester.md"
+      ]
     }
   ]
 }
