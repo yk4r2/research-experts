@@ -112,33 +112,9 @@ Critical, opinionated developer personas focused on approach and methodology.
 /plugin install dev-experts@deevs-agent-system
 ```
 
-## Repository Structure
-
-```
-.
-├── chain-system/          # Multi-session workflow chains
-│   ├── commands/          # /chain-* commands
-│   └── README.md
-├── tmux/                  # Terminal control skill
-│   ├── bin/tmux-ctl       # Main control script
-│   ├── lib/               # Implementation libraries
-│   ├── SKILL.md           # Skill definition
-│   ├── README.md          # User guide
-│   └── reference.md       # Low-level API
-├── dev-experts/           # Expert agent personas
-│   ├── agents/            # Agent definitions
-│   └── README.md
-└── .claude-plugin/
-    └── marketplace.json   # Marketplace manifest
-```
-
 ## Credits
 
 Inspired by:
 - [claude-code-tools](https://github.com/pchalasani/claude-code-tools/) by pchalasani
 - [superpowers](https://github.com/obra/superpowers/) by obra
 - [agent-commands](https://github.com/mitsuhiko/agent-commands) by mitsuhiko
-
-## License
-
-MIT
