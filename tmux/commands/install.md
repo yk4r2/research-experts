@@ -1,24 +1,24 @@
 ---
 name: tmux:install
-description: Add tmux-ctl to PATH for current session
+description: Setup tmux-ctl for current session
 ---
 
-Adds `tmux-ctl` to PATH for the current Claude Code session.
+Configures tmux-ctl access for the current Claude Code session.
 
 ## Steps
 
 1. Find the plugin installation path:
 ```bash
-TMUX_BIN=$(find ~/.claude -name "tmux-ctl" -path "*/tmux/bin/tmux-ctl" 2>/dev/null | head -1)
-TMUX_BIN_DIR=$(dirname "$TMUX_BIN")
+find ~/.claude -name "tmux-ctl" -path "*/tmux/bin/tmux-ctl" 2>/dev/null | head -1
 ```
 
-2. Add to PATH and verify:
-```bash
-export PATH="$PATH:$TMUX_BIN_DIR" && which tmux-ctl
-```
+2. Inform user of the full path found
 
-3. Inform user:
-   - `tmux-ctl` is now available for this session
-   - Run `/tmux:install` again in new sessions if needed
-   - For permanent setup, add to shell config: `export PATH="$PATH:$TMUX_BIN_DIR"`
+3. **IMPORTANT**: Update SKILL.md to use full path instead of just `tmux-ctl`:
+   - Replace all `tmux-ctl` commands with the full path
+   - Example: `tmux-ctl eval "echo test"` → `/full/path/to/tmux-ctl eval "echo test"`
+
+4. Tell user:
+   - `tmux-ctl` is now configured (using full path)
+   - For cleaner commands, add to shell config: `export PATH="$PATH:/path/to/tmux/bin"`
+   - Or create symlink: `ln -sf /path/to/tmux-ctl /usr/local/bin/tmux-ctl`
