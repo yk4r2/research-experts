@@ -19,8 +19,7 @@
       "name": "tmux",
       "description": "Interactive terminal control for REPLs, debuggers, and servers",
       "source": "./tmux",
-      "skills": ["./"],
-      "commands": ["./commands/"]
+      "skills": ["./"]
     },
     {
       "name": "dev-experts",

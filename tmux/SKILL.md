@@ -7,6 +7,12 @@ description: Control interactive CLI programs in tmux panes
 
 Control interactive CLI programs (REPLs, debuggers, servers) in separate tmux panes.
 
+**Setup**: Before first use, find tmux-ctl path:
+```bash
+find ~/.claude -name "tmux-ctl" -path "*/tmux/bin/tmux-ctl" 2>/dev/null | head -1
+```
+Use this full path for all `tmux-ctl` commands below.
+
 ## Core Commands
 
 ```bash
