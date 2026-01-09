@@ -120,6 +120,33 @@ Critical, opinionated developer personas focused on approach and methodology.
 /plugin install dev-experts@deevs-agent-system
 ```
 
+---
+
+### arxiv-search
+
+Search arXiv preprint repository for academic papers.
+
+**Core**: Query arXiv for research papers across physics, mathematics, computer science, quantitative biology, finance, and statistics.
+
+**Quick start**:
+```bash
+# Basic search (auto-selects Python or bash)
+arxiv_search "transformer attention mechanism"
+
+# Limit results
+arxiv_search "protein folding" --max-papers 5
+```
+
+**Use when**: Finding preprints, ML/AI papers, mathematical methods, scientific literature before journal publication.
+
+**Dependencies**: None (bash fallback). For better reliability: `uv pip install arxiv`
+
+**Details**: [arxiv-search/SKILL.md](arxiv-search/SKILL.md)
+
+```bash
+/plugin install arxiv-search@deevs-agent-system
+```
+
 ## Credits
 
 Inspired by:
