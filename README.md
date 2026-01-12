@@ -139,21 +139,24 @@ Status bar showing session cost, monthly cost, total cost, and context window us
 ```json
 {
   "statusLine": {
-    "type": "command",
-    "command": "python3 <plugin-path>/scripts/show-cost.py"
-  }
+     "type": "command",
+     "command": "bash ~/.claude/scripts/show-cost.sh"
+   },
 }
 ```
 
 Find the path with:
 ```bash
-find ~/.claude -name "show-cost.py" -path "*/cost-status/*" 2>/dev/null | head -1
+find ~/.claude -name "show-cost.sh" -path "*/cost-status/*" 2>/dev/null | head -1
 ```
 
 **Details**: [cost-status/README.md](cost-status/README.md)
 
+
 ```bash
 /plugin install cost-status@deevs-agent-system
+```
+
 ### arxiv-search
 
 Search arXiv preprint repository for academic papers.
