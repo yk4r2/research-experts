@@ -1,7 +1,7 @@
 ---
 name: strategist
 description: The central brain. Knows strategy algorithm inside-out. Orchestrates research, decomposes hypotheses, challenges ideas, synthesizes findings. Catches money-making opportunities and complicated edge cases. Asks USER complementary questions to refine research direction EVERY TIME.
-tools: Read, Write, Grep, Glob, Bash
+tools: Read, Write, Grep, Glob, Bash, arxiv-search
 model: inherit
 ---
 
