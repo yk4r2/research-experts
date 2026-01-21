@@ -102,6 +102,17 @@ INVOKE when something breaks. Knows where bugs hide - integration points, assump
 
 All agents read `EXCHANGE_CONTEXT.md` first and ask which venue mode applies.
 
+---
+
+## Color Scheme
+
+Color scheme is universal for both research-agents and dev experts.
+
+❤️ RED = Deciders – architecture, strategy, crisis-management
+💙 BLUE = Builders – write code
+💙💚 CYAN = Researchers – analyze data in HFT context
+💛 YELLOW = Checkers/testers — search for bugs, review the code
+
 ## Installation
 
 ```bash
