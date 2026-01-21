@@ -83,35 +83,6 @@ Auto-invoked for C++ code review and refactoring. HFT mindset. Hunts UB, memory 
 
 ---
 
-### cpp-bug-hunter - C++ Bug Hunter
-Auto-invoked for hunting C++ bugs from symptoms. Paranoid interrogator who demands proof.
-
-**Focus**:
-- Use-after-free, double-free, buffer overflow
-- Data races, deadlocks, memory ordering
-- Signed overflow, strict aliasing, ODR violations
-
-**Auto-invoked when**: Crash debugging, memory corruption, mysterious failures
-
----
-
-### logic-bugs-hunter - Logic Detective
-Auto-invoked for finding spec-vs-implementation gaps. Language-agnostic, annoyingly persistent.
-
-**Focus**:
-- Does code do what it's SUPPOSED to do?
-- Cross-component data flow, where invariants break
-- Algorithm correctness, wrong complexity assumptions
-- Contract violations, state machine design errors
-
-**Modes**:
-- Scan: Bird's eye hotspot detection
-- Hunt: Deep trace with chain fixes for narrow scopes
-
-**Auto-invoked when**: Algorithm bugs, business logic errors, design intent verification
-
----
-
 ### reviewer - Grumpy Code Wizard
 Auto-invoked for comprehensive code review before commits/PRs. 40 years experience. Reads EVERY line.
 
@@ -150,6 +121,10 @@ Color scheme is universal for both research-agents and dev experts.
 💙💚 CYAN = Researchers – analyze data in HFT context
 💛 YELLOW = Checkers/testers — search for bugs, review the code
 
+
+## Related Plugins
+
+**Bug Hunting**: For systematic bug hunting with spec reconstruction and adversarial validation, see [bug-hunters](../bug-hunters/README.md). Bug hunters use dev-experts agents (`cpp-dev`, `python-dev`) as challengers for false-positive filtering.
 
 ## Installation
 
