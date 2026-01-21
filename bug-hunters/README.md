@@ -112,7 +112,8 @@ This adversarial tension filters false positives.
 ## Color Scheme
 
 ❤️ RED = orchestrator (decider, coordinator)
-💛 YELLOW = hunters (checkers, bug finders)
+🧡 ORANGE = logic-hunter (spec detective, can lead or challenge)
+💛 YELLOW = language hunters (cpp-hunter, python-hunter)
 
 ---
 
