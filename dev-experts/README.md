@@ -139,6 +139,18 @@ Auto-invoked when writing tests for new features. Writes comprehensive, real-wor
 
 **Auto-invoked when**: Writing tests, improving coverage
 
+---
+
+## Color Scheme
+
+Color scheme is universal for both research-agents and dev experts.
+
+❤️ RED = Deciders – architecture, strategy, crisis-management
+💙 BLUE = Builders – write code
+💙💚 CYAN = Researchers – analyze data in HFT context
+💛 YELLOW = Checkers/testers — search for bugs, review the code
+
+
 ## Installation
 
 ```bash
