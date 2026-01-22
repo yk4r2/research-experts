@@ -121,6 +121,43 @@ Color scheme is universal for both research-agents and dev experts.
 💙💚 CYAN = Researchers – analyze data in HFT context
 💛 YELLOW = Checkers/testers — search for bugs, review the code
 
+## Flow
+
+```mermaid
+flowchart TD
+    USER([USER]) --> architect[/"architect<br/>🔴 Plans & Decides"/]
+
+    subgraph planning [Planning Phase]
+        architect -->|"design"| plan["📋 Implementation Plan"]
+    end
+
+    subgraph implementation [Implementation Phase]
+        plan --> coders
+        coders["Language Experts 💙<br/>cpp-dev / python-dev / rust-dev"]
+        coders -->|"challenge each other"| coders
+    end
+
+    subgraph testing [Testing Phase]
+        coders -->|"code ready"| tester["tester 💙<br/>Writes tests"]
+    end
+
+    subgraph review [Review Phase]
+        tester -->|"tests ready"| reviewer["reviewer 💛<br/>Validates everything"]
+    end
+
+    reviewer -->|"issues found"| coders
+    reviewer -->|"✅ approved"| done["🚀 Ready"]
+
+    devops["devops 🔴<br/>(when production breaks)"] -.->|"investigate"| coders
+```
+
+**Phases**:
+1. **Plan**: `architect` designs feature, explores 2-3 alternatives, creates plan
+2. **Implement**: Language experts (`cpp-dev`/`python-dev`/`rust-dev`) build it, can challenge each other
+3. **Test**: `tester` writes comprehensive tests
+4. **Review**: `reviewer` validates code quality, sends back if issues
+5. **Ship**: Ready for merge
+
 
 ## Related Plugins
 
