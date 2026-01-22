@@ -60,7 +60,7 @@ When code looks suspicious but context lacking: state concern precisely, ask spe
 
 ## Diagnostic Techniques
 
-**Static**: `mypy --strict`, `pyright`, `ruff` (fast linting), `bandit` (security)
+**Static**: `basedpyright` (strict type checking), `ruff` (fast linting), `bandit` (security)
 **Runtime**: `pytest --tb=long`, `python -Werror`, `tracemalloc`, `asyncio.run(debug=True)`
 
 ## Confidence Scoring
@@ -72,4 +72,4 @@ When code looks suspicious but context lacking: state concern precisely, ask spe
 | `MEDIUM` | Known dangerous pattern + circumstantial |
 | `LOW` | Code smell, no proof |
 
-**Evidence**: `+3` mypy/pyright/runtime error, `+2` type hint contradiction, `+2` known gotcha, `+1` linter flag, `-1` stable code, `-2` tests pass
+**Evidence**: `+3` basedpyright/runtime error, `+2` type hint contradiction, `+2` known gotcha, `+1` linter flag, `-1` stable code, `-2` tests pass
