@@ -20,19 +20,37 @@ You are the **Bug Hunt Orchestrator**. You don't hunt bugs directly. You reconst
 
 **ASK USER** if not stated: "Are we hunting **logic bugs** or **code-specific bugs**?"
 
+```mermaid
+flowchart TD
+    Q{"Logic bugs or<br/>code-specific?"}
+
+    subgraph logic_first [LOGIC-FIRST]
+        LH1["logic-hunter 🟠<br/>(lead)"]
+        LANG1["language hunter 💛<br/>(support)"]
+        CODE1["coding agent 💙<br/>(challenger)"]
+        LH1 --> LANG1 --> CODE1
+    end
+
+    subgraph code_first [CODE-FIRST]
+        LANG2["language hunter 💛<br/>(lead)"]
+        LH2["logic-hunter 🟠<br/>(challenger)"]
+        LANG2 --> LH2
+    end
+
+    Q -->|"Logic"| LH1
+    Q -->|"Code"| LANG2
+
+    CODE1 --> V{VERDICT}
+    LH2 --> V
+    V -->|CONFIRMED| report["📋 Report"]
+    V -->|FALSE_POSITIVE| discard["❌ Discard"]
+```
+
 ### Logic-First Mode
 For: algorithm correctness, spec-vs-impl gaps, design intent violations, data flow issues.
 
-```
-logic-hunter (lead) → language hunter (support) → coding agent (challenger)
-```
-
 ### Code-First Mode
 For: memory bugs, UB, async issues, type violations, language-specific gotchas.
-
-```
-language hunter (lead) → logic-hunter (challenger)
-```
 
 ## Workflow
 

@@ -48,39 +48,36 @@ Async pitfalls, None propagation, type violations.
 
 ## Flow
 
-```
-                              USER
-                                │
-                    "logic bugs or code-specific?"
-                                │
-             ┌──────────────────┴──────────────────┐
-             ▼                                     ▼
-      LOGIC-FIRST                           CODE-FIRST
-             │                                     │
-             ▼                                     ▼
-      logic-hunter (lead)                 language hunter (lead)
-             │                                     │
-             ▼                                     ▼
-      language hunter (support)           logic-hunter (challenger)
-             │                                     │
-             ▼                                     │
-      coding agent (challenger)                   │
-             │                                     │
-             └──────────────────┬──────────────────┘
-                                │
-                                ▼
-                         CHALLENGE VERDICT
-                                │
-              ┌─────────────────┼─────────────────┐
-              ▼                 ▼                 ▼
-        FALSE_POSITIVE     CONFIRMED        NEEDS_CONTEXT
-           (discard)            │             (re-hunt)
-                                ▼
-                      Confidence Scoring
-                                │
-                                ▼
-                          FINAL REPORT
-                       (MEDIUM+ confidence)
+```mermaid
+flowchart TD
+    USER([USER]) --> orchestrator[/"orchestrator<br/>🔴 Central Brain"/]
+    orchestrator --> Q{"Logic bugs or<br/>code-specific?"}
+
+    subgraph logic_first [LOGIC-FIRST Mode]
+        LH1["logic-hunter 🟠<br/>(lead)"]
+        LANG1["language hunter 💛<br/>(support)"]
+        CODE1["coding agent 💙<br/>(challenger)"]
+        LH1 --> LANG1 --> CODE1
+    end
+
+    subgraph code_first [CODE-FIRST Mode]
+        LANG2["language hunter 💛<br/>(lead)"]
+        LH2["logic-hunter 🟠<br/>(challenger)"]
+        LANG2 --> LH2
+    end
+
+    Q -->|"Logic"| LH1
+    Q -->|"Code"| LANG2
+
+    CODE1 --> V{CHALLENGE<br/>VERDICT}
+    LH2 --> V
+
+    V -->|FALSE_POSITIVE| discard["❌ Discard"]
+    V -->|CONFIRMED| score["Confidence Scoring"]
+    V -->|NEEDS_CONTEXT| rehunt["🔄 Re-hunt"]
+    rehunt -.-> Q
+
+    score --> report["📋 FINAL REPORT<br/>(MEDIUM+ confidence)"]
 ```
 
 ## Confidence Levels
