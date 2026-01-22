@@ -121,12 +121,8 @@ All agents read `EXCHANGE_CONTEXT.md` first and ask which venue mode applies.
 
 ## Color Scheme
 
-Color scheme is universal for both research-agents and dev experts.
-
-❤️ RED = Deciders – architecture, strategy, crisis-management
-💙 BLUE = Builders – write code
-💙💚 CYAN = Researchers – analyze data in HFT context
-💛 YELLOW = Checkers/testers — search for bugs, review the code
+❤️ RED = `strategist`, `crisis-hunter` (orchestrators)
+💚 CYAN = `data-sentinel`, `microstructure-analyst`, `cross-venue-analyst`, `causal-analyst`, `post-hoc-analyst` (researchers)
 
 ## Installation
 

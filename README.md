@@ -129,7 +129,7 @@ Systematic bug hunting with spec reconstruction, adversarial validation, and con
 - Filters false positives via adversarial validation with dev-experts
 - Use for: Starting any bug hunting session
 
-**`/logic-hunter`** - Spec detective (YELLOW)
+**`/logic-hunter`** - Spec detective (ORANGE)
 - Language-agnostic logic bugs, spec-vs-implementation gaps
 - Scan mode (hotspots) → Hunt mode (deep trace)
 - Use for: Algorithm correctness, data flow issues, design intent verification
@@ -209,6 +209,18 @@ arxiv_search "protein folding" --max-papers 5
 ```bash
 /plugin install arxiv-search@deevs-agent-system
 ```
+
+## Agent Color Scheme
+
+Universal color scheme across all agent plugins:
+
+| Color | Role | Examples |
+|-------|------|----------|
+| ❤️ **RED** | Deciders & Orchestrators | `architect`, `strategist`, `orchestrator`, `crisis-hunter`, `devops` |
+| 🧡 **ORANGE** | Hybrid (can lead or challenge) | `logic-hunter` |
+| 💛 **YELLOW** | Checkers & Validators | `reviewer`, `cpp-hunter`, `python-hunter` |
+| 💙 **BLUE** | Builders & Implementers | `cpp-dev`, `python-dev`, `rust-dev`, `tester` |
+| 💚 **CYAN** | Researchers & Analysts | `data-sentinel`, `microstructure-analyst`, `causal-analyst` |
 
 ## Credits
 
