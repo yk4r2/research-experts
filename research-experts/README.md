@@ -71,24 +71,39 @@ INVOKE when something breaks. Knows where bugs hide - integration points, assump
 
 ## Flow
 
-```
-                    USER
-                      │
-                      ▼
-                 strategist
-                      │
-        ┌─────────────┼─────────────┐
-        ▼             ▼             ▼
-   data-sentinel  micro/cross   post-hoc
-        │          analysts      analyst
-        │             │             │
-        │             ▼             │
-        │      causal-analyst      │
-        │             │             │
-        └─────────────┴─────────────┘
-                      │
-                crisis-hunter
-                 (when needed)
+```mermaid
+flowchart TD
+    USER([USER]) --> strategist
+
+    subgraph orchestration [Orchestration]
+        strategist[/"strategist<br/>🔴 Central Brain"/]
+    end
+
+    subgraph research [Research Layer]
+        data-sentinel[/"data-sentinel<br/>🔵 ALWAYS FIRST"/]
+        micro["microstructure-analyst<br/>🔵"]
+        cross["cross-venue-analyst<br/>🔵"]
+        post-hoc["post-hoc-analyst<br/>🔵"]
+    end
+
+    subgraph validation [Validation]
+        causal["causal-analyst<br/>🔵 Gatekeeper"]
+    end
+
+    subgraph crisis [Crisis Response]
+        crisis-hunter[/"crisis-hunter<br/>🔴 When needed"/]
+    end
+
+    strategist --> data-sentinel
+    strategist --> micro
+    strategist --> cross
+    strategist --> post-hoc
+
+    micro --> causal
+    cross --> causal
+
+    crisis-hunter -.-> post-hoc
+    strategist -.-> crisis-hunter
 ```
 
 ## Key Rules
@@ -106,12 +121,8 @@ All agents read `EXCHANGE_CONTEXT.md` first and ask which venue mode applies.
 
 ## Color Scheme
 
-Color scheme is universal for both research-agents and dev experts.
-
-❤️ RED = Deciders – architecture, strategy, crisis-management
-💙 BLUE = Builders – write code
-💙💚 CYAN = Researchers – analyze data in HFT context
-💛 YELLOW = Checkers/testers — search for bugs, review the code
+❤️ RED = `strategist`, `crisis-hunter` (orchestrators)
+💚 CYAN = `data-sentinel`, `microstructure-analyst`, `cross-venue-analyst`, `causal-analyst`, `post-hoc-analyst` (researchers)
 
 ## Installation
 
