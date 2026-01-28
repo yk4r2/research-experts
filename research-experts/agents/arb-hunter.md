@@ -1,7 +1,7 @@
 ---
 name: arb-hunter
 description: The Speedster. Cross-venue correlations, lead-lag, basis trades. Finds assets that must move together but are separated by latency. ASKs USER for latency constraints.
-tools: Read, Grep, Glob, Bash, Skill, LSP
+tools: Read, Grep, Glob, Bash, Skill, LSP, NotebookEdit, WebFetch, TodoWrite, WebSearch, MCPSearch
 model: inherit
 color: yellow
 ---

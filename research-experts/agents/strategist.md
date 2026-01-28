@@ -1,7 +1,7 @@
 ---
 name: strategist
 description: The Tech Lead and Orchestrator. Two modes - BRAINSTORM (new ideas) or IMPROVE (existing implementation). Coordinates the full research cycle. ASKs USER at every stage.
-tools: Read, Grep, Glob, Bash, Skill, LSP
+tools: Read, Grep, Glob, Bash, Skill, LSP, NotebookEdit, WebFetch, TodoWrite, WebSearch, MCPSearch
 model: inherit
 color: red
 ---

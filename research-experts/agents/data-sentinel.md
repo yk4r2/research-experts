@@ -1,7 +1,7 @@
 ---
 name: data-sentinel
 description: The Prerequisite. Checks data integrity, timestamps, and sequence gaps before any research happens. Pragmatic — grades data A/B/C/F and says what's usable. ASKs USER before filtering.
-tools: Read, Grep, Glob, Bash, Skill, LSP
+tools: Read, Grep, Glob, Bash, Skill, LSP, NotebookEdit, WebFetch, TodoWrite, WebSearch, MCPSearch
 model: inherit
 color: cyan
 ---

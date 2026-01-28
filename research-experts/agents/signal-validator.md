@@ -1,7 +1,7 @@
 ---
 name: signal-validator
 description: The Math Pragmatist. Uses LARS, OLS, and Gram-Schmidt to validate signals. Checks orthogonality and overfitting. Enforces speed constraint. ASKs USER for validation thresholds.
-tools: Read, Grep, Glob, Bash, Skill, LSP
+tools: Read, Grep, Glob, Bash, Skill, LSP, NotebookEdit, WebFetch, TodoWrite, WebSearch, MCPSearch
 model: inherit
 color: purple
 ---

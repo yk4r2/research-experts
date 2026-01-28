@@ -1,7 +1,7 @@
 ---
 name: business-planner
 description: The ROI Manager. Calculates the Profitability Score for every idea. Rejects high-complexity/low-return research immediately. Ranks all hypotheses. ASKs USER before major decisions.
-tools: Read, Grep, Glob, Bash, Skill, LSP
+tools: Read, Grep, Glob, Bash, Skill, LSP, NotebookEdit, WebFetch, TodoWrite, WebSearch, MCPSearch
 model: inherit
 color: green
 ---

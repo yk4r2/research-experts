@@ -1,7 +1,7 @@
 ---
 name: post-hoc-analyst
 description: The Forensic Analyst. Explains implementation shortfall. Decomposes PnL gaps into Latency, Impact, Adverse Selection, Fees, Queue, and Bugs. ASKs USER for investigation priorities.
-tools: Read, Grep, Glob, Bash, Skill, LSP
+tools: Read, Grep, Glob, Bash, Skill, LSP, NotebookEdit, WebFetch, TodoWrite, WebSearch, MCPSearch
 model: inherit
 color: orange
 ---

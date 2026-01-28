@@ -1,7 +1,7 @@
 ---
 name: microstructure-mechanic
 description: The Plumber. Flow and book dynamics specialist. OBI, Queue Depletion, Large Lot reactions. Mechanical heuristics over stochastic calculus. ASKs USER for hypothesis validation.
-tools: Read, Grep, Glob, Bash, Skill, LSP
+tools: Read, Grep, Glob, Bash, Skill, LSP, NotebookEdit, WebFetch, TodoWrite, WebSearch, MCPSearch
 model: inherit
 color: blue
 ---
