@@ -14,7 +14,7 @@ ROI-driven research agents for High-Frequency Trading. Two modes: **BRAINSTORM**
 
 ```bash
 /plugin marketplace add git@github.com:yk4r2/research-agents.git
-/plugin install research-experts@hft-research-agents
+/plugin install hft-experts@research-agents
 ```
 
 ## Two Modes
@@ -86,7 +86,7 @@ Install skills:
 
 ## Details
 
-See [research-experts/README.md](research-experts/README.md) for full agent documentation.
+See [hft-experts/README.md](hft-experts/README.md) for full agent documentation.
 
 ## Credits
 

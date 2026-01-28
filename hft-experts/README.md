@@ -1,4 +1,4 @@
-# Research Experts — The "Street HFT" Squad
+# HFT Experts — The "Street HFT" Squad
 
 ROI-driven research agents for HFT. Two modes: **BRAINSTORM** (new ideas) or **IMPROVE** (existing implementation). Full research cycle with rejection tracking.
 
@@ -174,5 +174,5 @@ Agents proactively use:
 
 ```bash
 /plugin marketplace add git@github.com:yk4r2/research-agents.git
-/plugin install research-experts@hft-experts
+/plugin install hft-experts@research-agents
 ```

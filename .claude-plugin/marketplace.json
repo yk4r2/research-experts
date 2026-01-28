@@ -1,5 +1,5 @@
 {
-  "name": "hft-experts",
+  "name": "research-agents",
   "owner": {
     "name": "yk4r2",
     "email": "dev@null.com"
@@ -10,9 +10,9 @@
   },
   "plugins": [
     {
-      "name": "research-experts",
+      "name": "hft-experts",
       "description": "ROI-driven Street HFT research agents. Two modes: BRAINSTORM (new ideas) or IMPROVE (existing). Full research cycle with rejection tracking.",
-      "source": "./research-experts",
+      "source": "./hft-experts",
       "agents": [
         "./agents/business-planner.md",
         "./agents/dummy-check.md",
