@@ -174,5 +174,5 @@ Agents proactively use:
 
 ```bash
 /plugin marketplace add git@github.com:yk4r2/research-agents.git
-/plugin install research-experts@hft-research-agents
+/plugin install research-experts@hft-experts
 ```
