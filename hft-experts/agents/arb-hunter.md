@@ -32,6 +32,24 @@ You are a RESEARCHER. Your job is to:
 5. **Rank** — Order opportunities by decay/latency ratio
 6. **ASK USER** — Before recommending (need latency and capital info)
 
+## Position in Pipeline
+
+```mermaid
+flowchart TD
+    data["data-sentinel 🔵<br/>Grade A/B"] --> arb["arb-hunter 💛<br/>Cross-Venue Arbs"]
+    hft-strategist["hft-strategist 🔴"] --> arb
+    user([USER]) -.->|mid-research| arb
+
+    arb --> dummy["dummy-check 🩷<br/>Simplicity + Causality"]
+    arb --> sv["signal-validator 🟣<br/>Statistical Validation"]
+    arb -.->|coordinates| mech["microstructure-mechanic 🔵"]
+
+    dummy -->|PASS| biz["business-planner 🟢"]
+    dummy -->|BLOCK| rejection[Rejection Log]
+
+    style arb fill:#ff0,stroke:#880,stroke-width:3px,color:#000
+```
+
 ## The Toolkit
 
 ### 1. Lead-Lag

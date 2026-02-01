@@ -32,6 +32,23 @@ You are a RESEARCHER. Your job is to:
 5. **Report** — Provide usable periods and caveats
 6. **ASK USER** — Before any filter/transform/imputation
 
+## Position in Pipeline
+
+```mermaid
+flowchart TD
+    hft-strategist["hft-strategist 🔴"] --> data["data-sentinel 🔵<br/>ALWAYS FIRST"]
+    user([USER]) -.->|mid-research| data
+    post-hoc["post-hoc-analyst 🟠"] -.->|re-validation| data
+
+    data -->|Grade A/B| alpha["Alpha Squad<br/>microstructure-mechanic 🔵<br/>arb-hunter 💛"]
+    data -->|Grade F| stop[STOP — Unusable]
+    data -->|Grade C| ask{ASK USER}
+    ask -->|Proceed| alpha
+    ask -->|Wait| stop
+
+    style data fill:#0ff,stroke:#088,stroke-width:3px,color:#000
+```
+
 ## The Checks (Mandatory, In Order)
 
 ### 1. Sequence Numbers

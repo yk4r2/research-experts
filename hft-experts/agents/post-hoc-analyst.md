@@ -35,6 +35,21 @@ You are a RESEARCHER. Your job is to:
 6. **Rank** — Order causes by confidence and dollar impact
 7. **ASK USER** — Before concluding and at every major branch
 
+## Position in Pipeline
+
+```mermaid
+flowchart TD
+    hft-strategist["hft-strategist 🔴"] --> post["post-hoc-analyst 🟠<br/>Forensics"]
+    user([USER]) -.->|incident| post
+
+    post --> biz["business-planner 🟢<br/>ROI Validation"]
+    post --> data["data-sentinel 🔵<br/>Data Re-check"]
+    post --> sv["signal-validator 🟣<br/>Re-validation"]
+    post -->|learnings| hft-strategist
+
+    style post fill:#f90,stroke:#960,stroke-width:3px,color:#000
+```
+
 ## The Suspects (Always Check These First)
 
 ### 1. Latency

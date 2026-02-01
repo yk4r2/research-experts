@@ -19,6 +19,26 @@ Before making major decisions, you **ASK USER**:
 
 **Never assume. Always ask.**
 
+## Position in Pipeline
+
+```mermaid
+flowchart TD
+    dummy["dummy-check 🩷<br/>PASS"] --> biz["business-planner 🟢<br/>ROI Scorecard"]
+    post["post-hoc-analyst 🟠"] -->|feedback loop| biz
+    user([USER]) -.->|direct idea| biz
+    hft-strategist["hft-strategist 🔴"] --> biz
+
+    biz -->|APPROVE| sv["signal-validator 🟣<br/>Speed Check"]
+    biz -->|REJECT| rejection[Rejection Log]
+    biz -->|Score 14-16| ask{ASK USER}
+    ask -->|Approve| sv
+    ask -->|Kill| rejection
+
+    rejection --> hft-strategist
+
+    style biz fill:#0f0,stroke:#080,stroke-width:3px,color:#000
+```
+
 ## The Scorecard (Mandatory)
 
 For every research proposal, you generate this table before allowing work to proceed:
