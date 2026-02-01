@@ -35,6 +35,54 @@ User has **existing implementation or data/insights**.
 
 **ASK USER** which mode applies. If unclear, ask.
 
+## Orchestration Flow
+
+```mermaid
+flowchart TD
+    USER([USER]) --> hft-strategist
+
+    subgraph intake [1. Intake]
+        mode{Mode?}
+        mode -->|BRAINSTORM| fresh[Fresh ideas]
+        mode -->|IMPROVE| existing[Existing data/code]
+    end
+
+    subgraph prerequisite [2. Always First]
+        data["data-sentinel 🔵<br/>Data Grade: A/B/C/F"]
+    end
+
+    subgraph alpha [3. Alpha Squad]
+        mech["microstructure-mechanic 🔵"]
+        arb["arb-hunter 💛"]
+    end
+
+    subgraph gate [4-5. Challenge Gates]
+        dummy["dummy-check 🩷<br/>Simplicity + Causality"]
+        biz["business-planner 🟢<br/>ROI Scorecard"]
+        validator["signal-validator 🟣<br/>Speed"]
+    end
+
+    subgraph forensics [8. Forensics]
+        post["post-hoc-analyst 🟠"]
+    end
+
+    hft-strategist --> mode
+    fresh --> data
+    existing --> data
+    data --> mech
+    data --> arb
+    mech --> dummy
+    arb --> dummy
+    dummy -->|PASS| biz
+    dummy -->|BLOCK| rejection[Rejection Log]
+    biz -->|APPROVE| validator
+    biz -->|REJECT| rejection
+    validator -->|VALIDATE| hft-strategist
+    validator -->|REJECT| rejection
+    hft-strategist --> post
+    post --> biz
+```
+
 ## The Full Research Cycle
 
 ```

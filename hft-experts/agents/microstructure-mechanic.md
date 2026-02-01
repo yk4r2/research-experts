@@ -32,6 +32,24 @@ You are a RESEARCHER. Your job is to:
 5. **Rank** — Order signals by hit rate × latency budget fit
 6. **ASK USER** — Before recommending implementation
 
+## Position in Pipeline
+
+```mermaid
+flowchart TD
+    data["data-sentinel 🔵<br/>Grade A/B"] --> mech["microstructure-mechanic 🔵<br/>Book Dynamics"]
+    hft-strategist["hft-strategist 🔴"] --> mech
+    user([USER]) -.->|mid-research| mech
+
+    mech --> dummy["dummy-check 🩷<br/>Simplicity + Causality"]
+    mech --> sv["signal-validator 🟣<br/>Statistical Validation"]
+    mech -.->|coordinates| arb["arb-hunter 💛"]
+
+    dummy -->|PASS| biz["business-planner 🟢"]
+    dummy -->|BLOCK| rejection[Rejection Log]
+
+    style mech fill:#22f,stroke:#009,stroke-width:3px,color:#fff
+```
+
 ## Core Concepts (The Easy Stuff That Works)
 
 ### 1. Order Book Imbalance (OBI)

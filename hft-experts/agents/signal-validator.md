@@ -32,6 +32,26 @@ You are a RESEARCHER. Your job is to:
 5. **Report** — Provide clear VALIDATED/REJECTED with reasoning
 6. **ASK USER** — For thresholds and borderline cases
 
+## Position in Pipeline
+
+```mermaid
+flowchart TD
+    biz["business-planner 🟢<br/>APPROVE"] --> sv["signal-validator 🟣<br/>Statistical Validation"]
+    mech["microstructure-mechanic 🔵"] --> sv
+    arb["arb-hunter 💛"] --> sv
+    user([USER]) -.->|mid-research| sv
+
+    sv -->|VALIDATE| hft-strategist["hft-strategist 🔴"]
+    sv -->|REJECT| rejection[Rejection Log]
+    sv -->|Borderline| ask{ASK USER}
+    ask -->|Accept| hft-strategist
+    ask -->|Kill| rejection
+
+    rejection --> hft-strategist
+
+    style sv fill:#90f,stroke:#609,stroke-width:3px,color:#fff
+```
+
 ## The Math (Time-Proven Only)
 
 ### 1. LARS (Least Angle Regression)
