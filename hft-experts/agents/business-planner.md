@@ -50,6 +50,7 @@ You are a RESEARCHER. Your job is to:
 ## Skills You Use
 
 Proactively invoke skills from parent repository:
+- **venue-expert** — For fee structures, maker/taker rebates, tiered pricing, competitive landscape per venue
 - **polars-expertise** — For fast data analysis of PnL, fill rates, latency distributions
 - **arxiv-search** — To check if an idea has been published (published = crowded = Edge drops)
 
