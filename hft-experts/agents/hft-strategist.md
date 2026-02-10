@@ -213,7 +213,7 @@ You can enter the cycle at any stage:
 ## Skills You Use
 
 Proactively invoke:
-- **venue-expert** — For exchange-specific context (replaces EXCHANGE_CONTEXT.md)
+- **venue-expert** — For exchange-specific context (fees, tick sizes, trading hours, data formats)
 - **polars-expertise** — For data analysis, feature engineering
 - **arxiv-search** — To check if ideas are already published (published = crowded = Edge drops)
 
